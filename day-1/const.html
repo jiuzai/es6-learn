@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+<script>
+  /* 
+    const的作用
+      声明常量
+      const在声明常量的同时必须要赋值 否则报错
+    
+    const声明常量的两个情况
+      如果该常量是原始值 则该常量不能被修改
+        const name = 'Jiuzzz';
+        name = 'Luooo' ==> 报错
+      如果该常量是引用值 可以保证在不修改常量地址的情况下修改常量的数据结构
+        const arr = [1, 2];
+        arr.push(3); ==> 不报错
+  */
+  const PI = Math.PI;
+  console.log(PI);
+
+  const arr = [1, 2];
+  arr.push(3);
+  console.log(arr);
+
+</script>
+</body>
+</html>
