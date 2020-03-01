@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+<script>
+
+  /* 
+    JS的组成部分
+      ECMAScript ==> es5 ==> es6
+      DOM ==> document object model
+      BOM ==> browser objec model
+
+    var和let的区别
+      1.var能够在同一个作用域中重复声明变量
+        let不能够在同一个作用域中重复声明变量
+      2.全局作用域中var声明的变量会自动成为window对象的属性
+        全局作用域中let声明的变量不会自动成为window对象的属性
+      3.var存在变量提升
+        let存在变量提升
+          let声明的变量在赋值之前使用会报错
+          在该变量之前称为暂时性死区 ==> TDZ(temporal dead zone)
+          暂时性死区的本质是变量已经在当前作用域中 但不能够使用
+      4.var不能生成块级作用域
+        let可以生成块级作用域
+  */
+
+  // es5声明变量的关键词
+  // var a = a;
+  // console.log(a);
+
+  // var a = 2;
+  // console.log(a);
+
+  // console.log(window.a);
+
+  // let b = b;
+  // console.log(b); 
+
+  // // let b = 2;
+  // // console.log(b);
+
+  // console.log(window.b);
+
+  // function auto() {
+  //   let b = 2;
+  //   console.log(b);
+  // }
+  // auto();
+
+  if (true) {
+    var a = 2;
+  }
+  console.log(a);
+
+  if (true) {
+    let b = 2;
+  }
+  console.log(b);
+
+</script>
+</body>
+</html>
