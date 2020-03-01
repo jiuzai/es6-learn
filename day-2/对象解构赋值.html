@@ -11,7 +11,16 @@
 
 <script>
 
-  let {name, age} = {name: 'Jiuzzz', age: 20};
+  // 对象解构的简洁写法
+  // let {name, age} = {name: 'Jiuzzz', age: 20};
+  // console.log(name, age);
+
+  // 对象解构的完整写法
+  // let {name: name, age: age} = {name: 'Jiuzzz', age: 20};
+  // console.log(name, age);
+
+  let {age: age = 20} = {name: 'Jiuzzz'};
+  console.log(age);
 
 </script>
 </body>
