@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+<script>
+
+  
+  // es5 遍历对象 for in
+  //  var obj = {
+  //    name: 'Jiuzzz',
+  //    age: 20
+  //  }
+  //  for (var key in obj) {
+  //    console.log(key, typeof key);
+  //  }
+
+  // es6 遍历数组 for of
+  let arr = [3, 4, 'Jiuzzz', 6];
+  // for (let key of arr) {
+  //   console.log(key, typeof key);
+  // }  
+
+  console.log(arr.keys());
+  for (let index of arr.keys()) {
+    console.log(index);
+  }
+
+</script>
+</body>
+</html>
