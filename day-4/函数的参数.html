@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+<script>
+
+  /* 
+    函数在传参的时候 可以使用解构赋值的方式传递数据
+    可以给接收不到数据的形参设置默认值
+   */
+
+  function fn([a, b, ...c]) {
+    console.log(a, b, c);
+    // console.log(name, age);
+  }
+
+  // fn([1, 2, 3]);
+  // fn({name: 'Jiuzzz', age: 20});
+  fn('Jiuzzz');
+
+</script>
+</body>
+</html>
