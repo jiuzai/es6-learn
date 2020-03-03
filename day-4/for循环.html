@@ -12,7 +12,7 @@
 <script>
 
   
-  // es5 遍历对象 for in
+  // es5 遍历对象/数组 for in
   //  var obj = {
   //    name: 'Jiuzzz',
   //    age: 20
@@ -27,9 +27,13 @@
   //   console.log(key, typeof key);
   // }  
 
-  console.log(arr.keys());
-  for (let index of arr.keys()) {
-    console.log(index);
+  // console.log(arr.keys());
+  // for (let index of arr.keys()) {
+  //   console.log(index);
+  // }
+
+  for (let [index, value] of arr.entries()) {
+    console.log(index, value);
   }
 
 </script>
