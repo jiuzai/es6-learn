@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+<script>
+
+  /* 
+    es5隐式全局变量的补充
+      当一个变量没有声明就复制 会从福函数中查找该变量
+      如果有该变量 则这个变量就是父级函数的 ==> 隐式父级变量
+
+    当函数的默认值生效 则()就会生成一个独立的作用域
+   */
+  // function fn(x, y = 2) {
+  //   console.log(x, y);
+  // }
+
+  // fn(2);
+
+  // var x = 1;
+  // function fn(x, y = x) {
+  //   console.log(y);
+  // }
+
+  // fn(2);
+
+  // let x = 1;
+  // function fn(y = x) {
+  //   let x = 2;
+  //   console.log(y);
+  // }
+
+  // fn();
+
+  // var x = 1;
+  // function fn(x = x) {
+  //   console.log(x);
+  // }
+
+  // fn();
+
+  var x = 1;
+  function fn(x, y = function() { x = 2; }) {
+    var x = 3;
+    y();
+    console.log(x);
+  }
+
+  fn();
+
+</script>
+</body>
+</html>
