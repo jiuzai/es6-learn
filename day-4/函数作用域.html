@@ -17,6 +17,8 @@
       如果有该变量 则这个变量就是父级函数的 ==> 隐式父级变量
 
     当函数的默认值生效 则()就会生成一个独立的作用域
+
+    函数的length属性 存储的是形参的个数(设置默认值的形参会被剔除)
    */
   // function fn(x, y = 2) {
   //   console.log(x, y);
@@ -46,14 +48,23 @@
 
   // fn();
 
-  var x = 1;
-  function fn(x, y = function() { x = 2; }) {
-    var x = 3;
-    y();
-    console.log(x);
+  // var x = 1;
+  // function fn(x, y = function() { x = 2; }) {
+  //   var x = 3;
+  //   y();
+  //   console.log(x);
+  // }
+
+  // fn();
+
+
+  // ...args 可以利用...收集数据的作用 把实参收集到args中
+  function fn(a, ...args) {
+    console.log(arguments);
+    console.log(args);
   }
 
-  fn();
+  fn(1, 2, 3);
 
 </script>
 </body>
